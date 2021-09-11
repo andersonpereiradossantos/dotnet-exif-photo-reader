@@ -1,6 +1,6 @@
 # C# .NET - Exif Photo Reader
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/andersonpereiradossantos/asp-net-mvc-example-generation-excel-spreadsheets-with-epplus/blob/main/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/andersonpereiradossantos/asp-net-mvc-example-generation-excel-spreadsheets-with-epplus/blob/main/LICENSE) ![nuget](https://img.shields.io/nuget/v/ExifPhotoReader)
 
 ## About code
 
