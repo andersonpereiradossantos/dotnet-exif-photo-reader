@@ -8,6 +8,23 @@ Library for reading EXIF data from files in JPG and TIFF formats. Written in .NE
 
 
 
+## Install
+
+On Nuget:
+```powershell
+PM> Install-Package ExifPhotoReader
+```
+
+.NET CLI
+```powershell
+> dotnet add package ExifPhotoReader
+```
+
+## NuGet
+https://www.nuget.org/packages/ExifPhotoReader
+
+
+
 ## Using
 
 Import in your class
@@ -30,6 +47,7 @@ Get specific EXIF tag of an image:
 exifImage.Orientation;
 //Output: Horizontal
 ```
+
 
 
 ## License
