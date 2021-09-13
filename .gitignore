@@ -3,3 +3,4 @@ obj
 packages
 *.suo
 *.dtbcache
+.vs/ExifPhotoReader/DesignTimeBuild/.dtbcache.v2

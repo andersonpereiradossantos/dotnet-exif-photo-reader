@@ -2,10 +2,11 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/andersonpereiradossantos/asp-net-mvc-example-generation-excel-spreadsheets-with-epplus/blob/main/LICENSE) ![nuget](https://img.shields.io/nuget/v/ExifPhotoReader)
 
+<img src="https://raw.githubusercontent.com/andersonpereiradossantos/assets/main/EXIF%20Reader.png" alt="Logo EXIF Photo Reader" style="zoom: 33%;" />
+
 ## About code
 
 Library for reading EXIF data from files in JPG and TIFF formats. Written in .NET Standard 2. This library makes use of `System.Drawing.Common` already included in the package.
-
 
 
 ## Install
@@ -22,7 +23,6 @@ PM> Install-Package ExifPhotoReader
 
 ## NuGet
 https://www.nuget.org/packages/ExifPhotoReader
-
 
 
 ## Using
@@ -47,7 +47,6 @@ Get specific EXIF tag of an image:
 exifImage.Orientation;
 //Output: Horizontal
 ```
-
 
 
 ## License

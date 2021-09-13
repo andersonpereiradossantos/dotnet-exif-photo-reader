@@ -14,7 +14,7 @@ namespace ExifPhotoReader
         public OrientationEnum Orientation { get; set; }
         public int XResolution { get; set; }
         public int YResolution { get; set; }
-        public short ResolutionUnit { get; set; }
+        public ResolutionUnitEnum ResolutionUnit { get; set; }
         public string Software { get; set; }
         public DateTime DateTime { get; set; }
         public int WhitePoint { get; set; }
@@ -26,7 +26,7 @@ namespace ExifPhotoReader
         public long ExifOffset { get; set; }
         public int ExposureTime { get; set; }
         public int FNumber { get; set; }
-        public short ExposureProgram { get; set; }
+        public ExposureProgramEnum ExposureProgram { get; set; }
         public short ISOSpeedRatings { get; set; }
         public string ExifVersion { get; set; }
         public DateTime DateTimeOriginal { get; set; }
@@ -39,7 +39,7 @@ namespace ExifPhotoReader
         public int ExposureBiasValue { get; set; }
         public int MaxApertureValue { get; set; }
         public int SubjectDistance { get; set; }
-        public short MeteringMode { get; set; }
+        public MeteringModeEnum MeteringMode { get; set; }
         public short LightSource { get; set; }
         public short Flash { get; set; }
         public int FocalLength { get; set; }
@@ -53,20 +53,20 @@ namespace ExifPhotoReader
         public long ExifInteroperabilityOffset { get; set; }
         public int FocalPlaneXResolution { get; set; }
         public int FocalPlaneYResolution { get; set; }
-        public short FocalPlaneResolutionUnit { get; set; }
-        public short SensingMethod { get; set; }
+        public FocalPlaneResolutionUnitEnum FocalPlaneResolutionUnit { get; set; }
+        public SensingMethodEnum SensingMethod { get; set; }
         public string FileSource { get; set; }
         public string SceneType { get; set; }
         public short ImageWidth { get; set; }
         public short ImageLength { get; set; }
         public short BitsPerSample { get; set; }
         public short Compression { get; set; }
-        public short PhotometricInterpretation { get; set; }
+        public PhotometricInterpretationEnum PhotometricInterpretation { get; set; }
         public short StripOffsets { get; set; }
         public short SamplesPerPixel { get; set; }
         public short RowsPerStrip { get; set; }
         public short StripByteConunts { get; set; }
-        public short PlanarConfiguration { get; set; }
+        public PlanarConfigurationEnum PlanarConfiguration { get; set; }
         public long JpegIFOffset { get; set; }
         public long JpegIFByteCount { get; set; }
         public short YCbCrSubSampling { get; set; }
@@ -74,7 +74,7 @@ namespace ExifPhotoReader
         public short SubfileType { get; set; }
         public short TransferFunction { get; set; }
         public string Artist { get; set; }
-        public short Predictor { get; set; }
+        public PredictorEnum Predictor { get; set; }
         public short TileWidth { get; set; }
         public short TileLength { get; set; }
         public long TileOffsets { get; set; }
@@ -96,7 +96,7 @@ namespace ExifPhotoReader
         public string SpatialFrequencyResponse { get; set; }
         public string Noise { get; set; }
         public long ImageNumber { get; set; }
-        public string SecurityClassification { get; set; }
+        public SecurityClassificationEnum SecurityClassification { get; set; }
         public string ImageHistory { get; set; }
         public short SubjectLocation { get; set; }
         public int ExposureIndex { get; set; }

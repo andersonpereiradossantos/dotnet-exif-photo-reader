@@ -42,7 +42,6 @@ namespace ExifPhotoReader
             string tagId = $"0x{property.Id.ToString("x").PadLeft(4, '0')}";
 
             ASCIIEncoding encoding = new ASCIIEncoding();
-            string propriedade = encoding.GetString(property.Value);
 
             switch (tagId)
             {
@@ -65,7 +64,7 @@ namespace ExifPhotoReader
                     exifProperties.YResolution = BitConverter.ToInt32(property.Value, 0);
                     break;
                 case "0x0128":
-                    exifProperties.ResolutionUnit = BitConverter.ToInt16(property.Value, 0);
+                    exifProperties.ResolutionUnit = (ResolutionUnitEnum)Enum.ToObject(typeof(ResolutionUnitEnum), BitConverter.ToInt16(property.Value, 0));
                     break;
                 case "0x0131":
                     exifProperties.Software = encoding.GetString(property.Value);
@@ -101,7 +100,7 @@ namespace ExifPhotoReader
                     exifProperties.FNumber = BitConverter.ToInt32(property.Value, 0);
                     break;
                 case "0x8822":
-                    exifProperties.ExposureProgram = BitConverter.ToInt16(property.Value, 0);
+                    exifProperties.ExposureProgram = (ExposureProgramEnum)Enum.ToObject(typeof(ExposureProgramEnum), BitConverter.ToInt16(property.Value, 0));
                     break;
                 case "0x8827":
                     exifProperties.ISOSpeedRatings = BitConverter.ToInt16(property.Value, 0);
@@ -140,7 +139,7 @@ namespace ExifPhotoReader
                     exifProperties.SubjectDistance = BitConverter.ToInt32(property.Value, 0);
                     break;
                 case "0x9207":
-                    exifProperties.MeteringMode = BitConverter.ToInt16(property.Value, 0);
+                    exifProperties.MeteringMode = (MeteringModeEnum)Enum.ToObject(typeof(MeteringModeEnum), BitConverter.ToInt16(property.Value, 0));
                     break;
                 case "0x9208":
                     exifProperties.LightSource = BitConverter.ToInt16(property.Value, 0);
@@ -182,10 +181,10 @@ namespace ExifPhotoReader
                     exifProperties.FocalPlaneYResolution = BitConverter.ToInt32(property.Value, 0);
                     break;
                 case "0xa210":
-                    exifProperties.FocalPlaneResolutionUnit = BitConverter.ToInt16(property.Value, 0);
+                    exifProperties.FocalPlaneResolutionUnit = (FocalPlaneResolutionUnitEnum)Enum.ToObject(typeof(FocalPlaneResolutionUnitEnum), BitConverter.ToInt16(property.Value, 0));
                     break;
                 case "0xa217":
-                    exifProperties.SensingMethod = BitConverter.ToInt16(property.Value, 0);
+                    exifProperties.SensingMethod = (SensingMethodEnum)Enum.ToObject(typeof(SensingMethodEnum), BitConverter.ToInt16(property.Value, 0));
                     break;
                 case "0xa300":
                     exifProperties.FileSource = encoding.GetString(property.Value);
@@ -206,7 +205,7 @@ namespace ExifPhotoReader
                     exifProperties.Compression = BitConverter.ToInt16(property.Value, 0);
                     break;
                 case "0x0106":
-                    exifProperties.PhotometricInterpretation = BitConverter.ToInt16(property.Value, 0);
+                    exifProperties.PhotometricInterpretation = (PhotometricInterpretationEnum)Enum.ToObject(typeof(PhotometricInterpretationEnum), BitConverter.ToInt16(property.Value, 0));
                     break;
                 case "0x0111":
                     exifProperties.StripOffsets = BitConverter.ToInt16(property.Value, 0);
@@ -221,7 +220,7 @@ namespace ExifPhotoReader
                     exifProperties.StripByteConunts = BitConverter.ToInt16(property.Value, 0);
                     break;
                 case "0x011c":
-                    exifProperties.PlanarConfiguration = BitConverter.ToInt16(property.Value, 0);
+                    exifProperties.PlanarConfiguration = (PlanarConfigurationEnum)Enum.ToObject(typeof(PlanarConfigurationEnum), BitConverter.ToInt16(property.Value, 0));
                     break;
                 case "0x0212":
                     exifProperties.YCbCrSubSampling = BitConverter.ToInt16(property.Value, 0);
@@ -239,7 +238,7 @@ namespace ExifPhotoReader
                     exifProperties.Artist = encoding.GetString(property.Value);
                     break;
                 case "0x013d":
-                    exifProperties.Predictor = BitConverter.ToInt16(property.Value, 0);
+                    exifProperties.Predictor = (PredictorEnum)Enum.ToObject(typeof(PredictorEnum), BitConverter.ToInt16(property.Value, 0));
                     break;
                 case "0x0142":
                     exifProperties.TileWidth = BitConverter.ToInt16(property.Value, 0);
@@ -305,7 +304,7 @@ namespace ExifPhotoReader
                     exifProperties.ImageNumber = BitConverter.ToInt64(property.Value, 0);
                     break;
                 case "0x9212":
-                    exifProperties.SecurityClassification = encoding.GetString(property.Value);
+                    exifProperties.SecurityClassification = (SecurityClassificationEnum)Enum.ToObject(typeof(SecurityClassificationEnum), encoding.GetString(property.Value));
                     break;
                 case "0x9213":
                     exifProperties.ImageHistory = encoding.GetString(property.Value);
