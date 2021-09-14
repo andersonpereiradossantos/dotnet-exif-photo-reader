@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExifPhotoReader
 {
-    public enum SecurityClassificationEnum
+    public enum SecurityClassification
     {
         Confidential = 'C',
         Restricted = 'R',

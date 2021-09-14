@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExifPhotoReader
 {
-    public enum SensingMethodEnum
+    public enum SensingMethod
     {
         [Description("Monochrome area")]
         MonochromeArea = 1,

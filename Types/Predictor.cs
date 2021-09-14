@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExifPhotoReader
 {
-    public enum PredictorEnum
+    public enum Predictor
     {
         None = 1,
         [Description("Horizontal differencing")]

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExifPhotoReader
 {
-    public enum MeteringModeEnum
+    public enum MeteringMode
     {
         Unknown = 0,
         Average = 1,

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace ExifPhotoReader
 {
-    public enum PlanarConfigurationEnum
+    public enum YCbCrPositioning
     {
-        Chunky = 1,
-        Planar = 2,
+        Centered = 1,
+        Cosited = 2
     }
 }

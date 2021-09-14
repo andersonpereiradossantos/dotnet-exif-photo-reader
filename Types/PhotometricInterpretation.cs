@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExifPhotoReader
 {
-    public enum PhotometricInterpretationEnum
+    public enum PhotometricInterpretation
     {
         [Description("White Is Zero")]
         WhiteIsZero = 0,

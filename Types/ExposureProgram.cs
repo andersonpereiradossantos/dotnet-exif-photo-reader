@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExifPhotoReader
 {
-    public enum ExposureProgramEnum
+    public enum ExposureProgram
     {
         [Description("Not Defined")]
         NotDefined = 0,

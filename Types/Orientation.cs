@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExifPhotoReader
 {
-    public enum OrientationEnum
+    public enum Orientation
     {
         Horizontal = 1,
         [Description("Mirror horizontal")]
