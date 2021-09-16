@@ -26,7 +26,7 @@ namespace ExifPhotoReader
         public int ReferenceBlackWhite { get; set; }
         public string Copyright { get; set; }
         public long ExifOffset { get; set; }
-        public int ExposureTime { get; set; }
+        public float ExposureTime { get; set; }
         public ExposureMode ExposureMode { get; set; }
         public float FNumber { get; set; }
         public ExposureProgram ExposureProgram { get; set; }
@@ -36,16 +36,16 @@ namespace ExifPhotoReader
         public DateTime DateTimeDigitized { get; set; }
         public string ComponentConfiguration { get; set; }
         public int CompressedBitsPerPixel { get; set; }
-        public int ShutterSpeedValue { get; set; }
+        public float ShutterSpeedValue { get; set; }
         public int ApertureValue { get; set; }
         public int BrightnessValue { get; set; }
-        public int ExposureBiasValue { get; set; }
+        public float ExposureBiasValue { get; set; }
         public float MaxApertureValue { get; set; }
         public int SubjectDistance { get; set; }
         public MeteringMode MeteringMode { get; set; }
-        public short LightSource { get; set; }
+        public LightSource LightSource { get; set; }
         public Flash Flash { get; set; }
-        public int FocalLength { get; set; }
+        public float FocalLength { get; set; }
         public string MakerNote { get; set; }
         public string UserComment { get; set; }
         public string FlashPixVersion { get; set; }
@@ -58,7 +58,7 @@ namespace ExifPhotoReader
         public int FocalPlaneYResolution { get; set; }
         public FocalPlaneResolutionUnit FocalPlaneResolutionUnit { get; set; }
         public SensingMethod SensingMethod { get; set; }
-        public string FileSource { get; set; }
+        public FileSource FileSource { get; set; }
         public string SceneType { get; set; }
         public short ImageWidth { get; set; }
         public short ImageLength { get; set; }
@@ -124,5 +124,6 @@ namespace ExifPhotoReader
         public Saturation Saturation { get; set; }
         public Sharpness Sharpness { get; set; }
         public SubjectDistanceRange SubjectDistanceRange { get; set; }
+        public InteropIndex InteropIndex { get; set; }
     }
 }

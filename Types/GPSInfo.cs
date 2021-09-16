@@ -14,7 +14,7 @@ namespace ExifPhotoReader.Types
         public LongitudeRef LongitudeRef { get; set; }
         public double Longitude { get; set; }
         public AltitudeRef AltitudeRef { get; set; }
-        public double Altitude { get; set; }
+        public float Altitude { get; set; }
         public DateTime TimeStamp { get; set; }
         public string Satellites { get; set; }
         public Status Status { get; set; }
