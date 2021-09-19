@@ -49,9 +49,11 @@ exifImage.Orientation;
 //Output: Horizontal
 ```
 
+## Examples of usage
+[.NET Core MVC](https://github.com/andersonpereiradossantos/dotcore-photo-info)
+
 
 ## License
-
 Exif Photo Reader is shared under the MIT license. This means you can modify and use it however you want, even for comercial use. If you liked it, consider marking a ⭐️.
 
 ## Author
