@@ -1,6 +1,7 @@
 ﻿using ExifPhotoReader.Types;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,13 @@ namespace ExifPhotoReader
 {
     public class ExifImageProperties
     {
+        [Display(Name = "Image Description")]
         public string ImageDescription { get; set; }
+        [Display(Name = "Make")]
         public string Make { get; set; }
+        [Display(Name = "Model")]
         public string Model { get; set; }
+        [Display(Name = "Orientation")]
         public Orientation Orientation { get; set; }
         public int XResolution { get; set; }
         public int YResolution { get; set; }
@@ -125,5 +130,9 @@ namespace ExifPhotoReader
         public Sharpness Sharpness { get; set; }
         public SubjectDistanceRange SubjectDistanceRange { get; set; }
         public InteropIndex InteropIndex { get; set; }
+        public string LensInfo { get; set; }
+        public string LensMake { get; set; }
+        public string LensModel { get; set; }
+        public string LensSerialNumber { get; set; }
     }
 }
