@@ -8,36 +8,48 @@ using ExifPhotoReader.Types;
 namespace ExifPhotoReader
 {
     public class ExifPhoto { 
-        static List<string> hex = new List<string>();
-
         public static ExifImageProperties GetExifDataPhoto(string path)
         {
-            Image file = new Bitmap(path);
-
-            PropertyItem[] propItems = file.PropertyItems;
-
-            ExifImageProperties exifProperties = new ExifImageProperties();
-
-            foreach (PropertyItem item in propItems)
+            try
             {
-                Convert(item, exifProperties);
-            }
+                Image file = new Bitmap(path);
 
-            return exifProperties;
+                PropertyItem[] propItems = file.PropertyItems;
+
+                ExifImageProperties exifProperties = new ExifImageProperties();
+
+                foreach (PropertyItem item in propItems)
+                {
+                    Convert(item, exifProperties);
+                }
+
+                return exifProperties;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public static ExifImageProperties GetExifDataPhoto(Image file)
         {
-            PropertyItem[] propItems = file.PropertyItems;
-
-            ExifImageProperties exifProperties = new ExifImageProperties();
-
-            foreach (PropertyItem item in propItems)
+            try
             {
-                Convert(item, exifProperties);
-            }
+                PropertyItem[] propItems = file.PropertyItems;
 
-            return exifProperties;
+                ExifImageProperties exifProperties = new ExifImageProperties();
+
+                foreach (PropertyItem item in propItems)
+                {
+                    Convert(item, exifProperties);
+                }
+
+                return exifProperties;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
 
         private static ExifImageProperties Convert(PropertyItem property, ExifImageProperties exifProperties)
