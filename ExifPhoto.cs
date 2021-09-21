@@ -18,6 +18,8 @@ namespace ExifPhotoReader
 
                 ExifImageProperties exifProperties = new ExifImageProperties();
 
+                exifProperties.GPSInfo = new GPSInfo();
+
                 foreach (PropertyItem item in propItems)
                 {
                     Convert(item, exifProperties);
@@ -38,6 +40,8 @@ namespace ExifPhotoReader
                 PropertyItem[] propItems = file.PropertyItems;
 
                 ExifImageProperties exifProperties = new ExifImageProperties();
+
+                exifProperties.GPSInfo = new GPSInfo();
 
                 foreach (PropertyItem item in propItems)
                 {
@@ -296,7 +300,6 @@ namespace ExifPhotoReader
                     exifProperties.SpectralSensitivity = Utils.getStringValue(property);
                     break;
                 case 0x0000:
-                    exifProperties.GPSInfo = new GPSInfo();
                     exifProperties.GPSInfo.VersionID = Utils.getNumberValueInt16(property);
                     break;
                 case 0x0001:
